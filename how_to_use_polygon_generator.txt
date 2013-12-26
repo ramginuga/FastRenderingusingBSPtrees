@@ -1,0 +1,37 @@
+See PolygonGeneratorTest.cpp for usage
+
+**Include PolygonGenerator.h
+
+
+files:
+-----
+PolygonGenerator.cpp
+PolygonGenerator.h
+
+==========================================================================================
+Constructor:
+------------
+PolygonGenerator p; - creates a polygon generator with Xres = Yres = 320'
+PolygonGenerator p(xres, yres)  - polygon generator with x-resolution and y-resolution
+=========================================================================================
+
+Generation:
+-----------
+=============================================================================================
+case 1) Inputs : a)Size of Triangle - enum { very_small, small, large, medium, very_large }
+		 b)Number of triangles
+
+//code
+PolygonGenerator p;
+//generates very_large triangles of 
+vector<Triangle> gen = p.Generate(very_large,10);
+vector<Triangle> gen2 = p.Generate(large,10);
+
+	Outputs : vector<Triangle> generatedTriangles;
+===============================================================================================
+case 2) Inputs : a)Number of triangles covered by each pixel
+//code
+vector<Triangle> gen = p.Generate(20);  - each pixel covered by 20 triangles
+
+Outputs : vector<Triangle> generatedTriangles;
+=================================================================================================
